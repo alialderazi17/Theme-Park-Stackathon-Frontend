@@ -36,10 +36,9 @@ const ParkDetails = () => {
     <>
       <div className="detail">
         <div className="detail-header">
+          <h1>{park.name}</h1>
           <img src={park.image} alt={park.name} />
-          <div className="listing-name">
-            <h1>{park.name}</h1>
-          </div>
+          <div className="listing-name"></div>
         </div>
         <div className="info-wrapper">
           <div className="listing-header">
