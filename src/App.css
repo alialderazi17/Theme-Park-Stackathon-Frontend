@@ -27,7 +27,7 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER */
 .container {
   padding: 20px;
   text-align: center;
@@ -46,19 +46,26 @@ h1 {
   gap: 20px;
 }
 
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 /* CARD */
 .park-card {
   background-color: #1e1e1e;
   border-radius: 12px;
   padding: 15px;
+  cursor: pointer;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .park-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(245, 197, 24, 0.5);
+  box-shadow: 0 0 15px rgba(245, 197, 24, 0.6);
 }
 
 /* IMAGE */
@@ -73,14 +80,14 @@ h1 {
 /* TEXT */
 .park-card h3 {
   color: #f5c518;
+  text-decoration: none;
+}
+
+.park-card a {
+  text-decoration: none;
 }
 
 .movie {
   color: #ccc;
   margin-top: 10px;
-}
-
-/* LINKS */
-a {
-  text-decoration: none;
 }
