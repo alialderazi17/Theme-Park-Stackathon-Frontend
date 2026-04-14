@@ -9,7 +9,7 @@ const Themeparks = () => {
     const getParks = async () => {
       try {
         const response = await axios.get(
-          "https://theme-park-stackathon-i3hh.onrender.com/parks"
+          "https://theme-park-stackathon-i3hh.onrender.com/themeparks"
         )
         setParks(response.data)
       } catch (error) {
