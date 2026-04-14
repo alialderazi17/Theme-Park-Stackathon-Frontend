@@ -55,7 +55,7 @@ const App = () => {
                         className="park-image"
                       />
 
-                      <p className="movie">🎬 {park.movie}</p>
+                      <h4 className="movie">🎬 {park.movie}</h4>
                     </div>
                   ))}
                 </div>
