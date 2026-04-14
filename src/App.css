@@ -80,6 +80,11 @@ h1 {
 /* TEXT */
 .park-card h3 {
   color: #f5c518;
+  text-decoration: none;
+}
+
+.park-card a {
+  text-decoration: none;
 }
 
 .movie {
