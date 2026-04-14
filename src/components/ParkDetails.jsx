@@ -34,22 +34,28 @@ const ParkDetails = () => {
 
   return park ? (
     <>
-      <div className="detail">
-        <div className="detail-header">
-          <h1>{park.name}</h1>
-          <img src={park.image} alt={park.name} />
-          <div className="listing-name"></div>
-        </div>
-        <div className="info-wrapper">
-          <div className="listing-header">
-            <h3>Movie: {park.movie}</h3>
+      <div className="container">
+        <div className="detail">
+          <div className="detail-header">
+            <h1>{park.name}</h1>
+            <img src={park.image} alt={park.name} />
+            <div className="listing-name"></div>
           </div>
-          <p>{park.description}</p>
-          <button onClick={handleDelete}>Delete Park</button>
+          <div className="info-wrapper">
+            <div className="listing-header">
+              <h3>Movie: {park.movie}</h3>
+            </div>
+            <p>{park.description}</p>
+            <button className="delete-btn" onClick={handleDelete}>
+              Delete Park
+            </button>
+          </div>
         </div>
+        <br></br>
+        <Link to="/themeparks" className="back-link">
+          Back
+        </Link>
       </div>
-      <br></br>
-      <Link to="/themeparks">Back</Link>
     </>
   ) : null
 }
