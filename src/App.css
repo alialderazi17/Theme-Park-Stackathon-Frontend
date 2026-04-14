@@ -1,4 +1,88 @@
+/* GLOBAL */
 body {
   margin: 0;
-  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #110f0f;
+  padding: 15px 30px;
+  border-bottom: 2px solid #f5c518;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: #f5c518;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* TITLE */
+h1 {
+  color: #f5c518;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.parks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CARD */
+.park-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.park-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(245, 197, 24, 0.6);
+}
+
+/* IMAGE */
+.park-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* TEXT */
+.park-card h3 {
+  color: #f5c518;
+}
+
+.movie {
+  color: #ccc;
+  margin-top: 10px;
 }

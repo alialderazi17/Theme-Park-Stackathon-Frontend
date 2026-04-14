@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
+import "../App.css"
 
 const Themeparks = () => {
   const [parks, setParks] = useState([])
@@ -21,24 +22,26 @@ const Themeparks = () => {
   }, [])
 
   return (
-    <div>
+    <div className="container">
       <h1>Theme Parks</h1>
 
-      {parks.map((park) => {
-        const { _id: id, name, image, movie, description } = park
+      <div className="parks-grid">
+        {parks.map((park) => {
+          const { _id: id, name, image, movie } = park
 
-        return (
-          <div key={id}>
-            <Link to={`/themeparks/${id}`}>
-              <h2>{name}</h2>
+          return (
+            <Link to={`/themeparks/${id}`} className="card-link" key={id}>
+              <div className="park-card">
+                <h3>{name}</h3>
+
+                <img src={image} alt={name} className="park-image" />
+
+                <p className="movie">🎬 {movie}</p>
+              </div>
             </Link>
-
-            <img src={image} alt={name} />
-            <p>{movie}</p>
-            <p>{description}</p>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }
