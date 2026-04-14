@@ -36,7 +36,7 @@ const Themeparks = () => {
 
                 <img src={image} alt={name} className="park-image" />
 
-                <p className="movie">🎬 {movie}</p>
+                <h4 className="movie">🎬 {movie}</h4>
               </div>
             </Link>
           )
