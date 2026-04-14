@@ -91,3 +91,113 @@ h1 {
   color: #ccc;
   margin-top: 10px;
 }
+
+/* FORM STYLING */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+form label {
+  color: #f5c518;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #f5c518;
+  box-shadow: 0 0 5px rgba(245, 197, 24, 0.3);
+}
+
+form button {
+  background-color: #f5c518;
+  color: #121212;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #000000;
+  color: #f5c518;
+}
+
+/* DETAILS PAGE STYLING */
+.detail {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.detail-header img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.info-wrapper {
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.info-wrapper p {
+  line-height: 1.6;
+  color: #ddd;
+  font-size: 18px;
+}
+
+/* BUTTONS & LINKS IN DETAILS */
+.delete-btn {
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #5a0000; /* Even darker on hover */
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #f5c518;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
