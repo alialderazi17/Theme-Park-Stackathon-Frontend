@@ -10,14 +10,19 @@ import { Link } from "react-router-dom"
 
 const App = () => {
   const [parks, setParks] = useState([])
-
+  const [featured, setFeatured] = useState([])
   useEffect(() => {
     const getParks = async () => {
       try {
         let response = await axios.get(
-          "https://theme-park-stackathon-i3hh.onrender.com/parks"
+          "https://theme-park-stackathon-i3hh.onrender.com/themeparks"
         )
         setParks(response.data)
+
+        const shuffled = [...response.data].sort(() => 0.5 - Math.random())
+        const selected = shuffled.slice(0, 3)
+
+        setFeatured(selected)
       } catch (err) {
         console.log(err)
       }
@@ -38,7 +43,7 @@ const App = () => {
                 <h1>Featured Parks</h1>
 
                 <div className="parks-grid">
-                  {parks.map((park) => (
+                  {featured.map((park) => (
                     <div className="park-card" key={park._id}>
                       <Link to={`/themeparks/${park._id}`}>
                         <h3>{park.name}</h3>
