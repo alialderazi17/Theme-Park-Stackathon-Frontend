@@ -9,7 +9,9 @@ const App = () => {
   useEffect(() => {
     const getParks = async () => {
       try {
-        let response = await axios.get("http://localhost:3000/parks")
+        let response = await axios.get(
+          "https://theme-park-stackathon-i3hh.onrender.com/themeparks"
+        )
         // set the data state
         setParks(response.data)
       } catch (err) {
@@ -29,7 +31,7 @@ const App = () => {
           <Link to={`/parks/${park._id}`}>
             <h3>{park.name}</h3>
           </Link>
-          <p>Location: {park.location}</p>
+          <p>Movie: {park.Movie}</p>
         </div>
       ))}
     </>
