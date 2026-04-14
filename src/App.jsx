@@ -1,18 +1,17 @@
-import "./App.css"
-import { Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Themeparks from "./components/Themeparks"
 import ParkDetails from "./components/ParkDetails"
 import Form from "./components/Form"
 import Nav from "./components/Nav"
+
 const App = () => {
   return (
     <>
-      <header>
-        <Nav />
-      </header>
-
+      <Nav />
       <Routes>
-        <Route path="/themeparks/:id" element={<ParkDetails />} />
+        <Route path="/themeparks" element={<Themeparks />} />
         <Route path="/themeparks/new" element={<Form />} />
+        <Route path="/themeparks/:id" element={<ParkDetails />} />
       </Routes>
     </>
   )
